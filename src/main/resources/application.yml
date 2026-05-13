@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/czanix}
+    username: ${DB_USER:czanix}
+    password: ${DB_PASSWORD:czanix_dev}
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: ${PORT:3000}
